@@ -4,15 +4,11 @@
   "description": "A Tailwind CSS powered datepicker built with vanilla JavaScript and Flowbite",
   "module": "js/main.js",
   "exports": {
-    ".": "./js/main.js",
-    "./Datepicker": "./js/Datepicker.js",
-    "./DateRangePicker": "./js/DateRangePicker.js",
-    "./locales/*": "./js/i18n/locales/*.js",
-    "./locales/": "./js/i18n/locales/"
+    ".": "./js/main.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/themesberg/tailwind-datepicker"
+    "url": "https://github.com/richard-wang-tw/flowbite-datepicker"
   },
   "homepage": "https://flowbite.com/docs/plugins/datepicker/",
   "scripts": {
@@ -60,5 +56,8 @@
   },
   "dependencies": {
     "flowbite": "^1.4.5"
-  }
+  },
+  "files": [
+    "js"
+  ]
 }
