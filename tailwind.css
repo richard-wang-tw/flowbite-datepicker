@@ -846,8 +846,8 @@ input[type="range"]::-ms-fill-lower {
   left: 0px;
 }
 
-.z-20 {
-  z-index: 20;
+.z-50 {
+  z-index: 50;
 }
 
 .mb-1 {

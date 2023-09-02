@@ -1,4 +1,22 @@
-# Flowbite Datepicker - Built with Tailwind CSS
+# Difference to original version 1.2.2
+
+- add typescript support
+- fix next.js 13 app router compatibility issue by update `/js/lib/dom.js`
+    ```ts
+    // before
+    const range = document.createRange();
+    export function parseHTML(html) {
+      return range.createContextualFragment(html);
+    }
+
+    // after
+    export function parseHTML(html) {
+      const range = document.createRange();
+      return range.createContextualFragment(html);
+    }
+    ```
+
+# Tailwind CSS Datepicker
 
 This project is a free and open source datepicker library which uses the utility-first classes from Tailwind and the JavaScript from another open source library called Vanilla JS Datepicker.
 
