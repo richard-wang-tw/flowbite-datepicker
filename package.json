@@ -1,6 +1,6 @@
 {
   "name": "@richard-wang-tw/flowbite-datepicker",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A Tailwind CSS powered datepicker built with vanilla JavaScript and Flowbite",
   "module": "js/main.js",
   "exports": {

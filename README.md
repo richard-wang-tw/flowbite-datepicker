@@ -1,4 +1,25 @@
-# Difference to original version 1.2.2
+# Release 1.2.4
+
+- add date format typescript support to DateRangePicker
+- add onChange hook to DateRangePicker
+
+```ts
+declare class DateRangePicker {
+  constructor(element: HTMLElement | null, options?: {
+    onChange?: (dates:{
+      start:Date,
+      end:Date
+    })=>void,
+    /**
+     * custom date format such as `yyyy-mm-dd`, 
+     */
+    format?:string 
+  },
+  );
+}
+```
+
+# Release 1.2.3
 
 - add typescript support
 - fix next.js 13 app router compatibility issue by update `/js/lib/dom.js`
