@@ -1,6 +1,6 @@
-import Datepicker from "./Datepicker.js";
-import { formatDate } from "./lib/date-format.js";
-import { registerListeners, unregisterListeners } from "./lib/event.js";
+import {registerListeners, unregisterListeners} from './lib/event.js';
+import {formatDate} from './lib/date-format.js';
+import Datepicker from './Datepicker.js';
 
 // filter out the config options inapproprite to pass to Datepicker
 function filterOptions(options) {
@@ -14,7 +14,7 @@ function filterOptions(options) {
 }
 
 function setupDatepicker(rangepicker, changeDateListener, el, options) {
-  registerListeners(rangepicker, [[el, "changeDate", changeDateListener]]);
+  registerListeners(rangepicker, [[el, 'changeDate', changeDateListener]]);
   new Datepicker(el, options, rangepicker);
 }
 
@@ -31,7 +31,7 @@ function onChangeDate(rangepicker, ev) {
   }
 
   const datepickers = rangepicker.datepickers;
-  const setDateOptions = { render: false };
+  const setDateOptions = {render: false};
   const changedSide = rangepicker.inputs.indexOf(target);
   const otherSide = changedSide === 0 ? 1 : 0;
   const changedDate = datepickers[changedSide].dates[0];
@@ -81,7 +81,7 @@ export default class DateRangePicker {
   constructor(element, options = {}) {
     const inputs = Array.isArray(options.inputs)
       ? options.inputs
-      : Array.from(element.querySelectorAll("input"));
+      : Array.from(element.querySelectorAll('input'));
     if (inputs.length < 2) {
       return;
     }
@@ -97,7 +97,7 @@ export default class DateRangePicker {
     // in order for initial date setup to work right when pcicLvel > 0,
     // let Datepicker constructor add the instance to the rangepicker
     const datepickers = [];
-    Object.defineProperty(this, "datepickers", {
+    Object.defineProperty(this, 'datepickers', {
       get() {
         return datepickers;
       },
@@ -107,9 +107,9 @@ export default class DateRangePicker {
     Object.freeze(datepickers);
     // normalize the range if inital dates are given
     if (datepickers[0].dates.length > 0) {
-      onChangeDate(this, { target: this.inputs[0] });
+      onChangeDate(this, {target: this.inputs[0]});
     } else if (datepickers[1].dates.length > 0) {
-      onChangeDate(this, { target: this.inputs[1] });
+      onChangeDate(this, {target: this.inputs[1]});
     }
   }
 
@@ -210,9 +210,9 @@ export default class DateRangePicker {
     delete this._updating;
 
     if (datepicker1.dates[0] !== origDates[1]) {
-      onChangeDate(this, { target: this.inputs[1] });
+      onChangeDate(this, {target: this.inputs[1]});
     } else if (datepicker0.dates[0] !== origDates[0]) {
-      onChangeDate(this, { target: this.inputs[0] });
+      onChangeDate(this, {target: this.inputs[0]});
     }
   }
 }

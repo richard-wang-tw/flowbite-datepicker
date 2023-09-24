@@ -1,3 +1,7 @@
+# Release 1.2.5
+
+- fix typescript support issue
+
 # Release 1.2.4
 
 - add date format typescript support to DateRangePicker
